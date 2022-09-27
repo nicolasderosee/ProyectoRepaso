@@ -1,6 +1,9 @@
 from src.web import create_app
+from pathlib import Path
 
-app = create_app()
+static_folder = Path(__file__).parent.joinpath("public") #referencio a la carpeta public 
+
+app = create_app(static_folder=static_folder)
 
 def main():
     app.run

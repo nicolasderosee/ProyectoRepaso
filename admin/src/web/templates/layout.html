@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    {% block head %} <!--bloque de head-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>{% block title %}{% endblock %}</title> <!--bloque de titulos-->
+    {% endblock %}
+  </head>
+  <body>
+    <div id="navbar">
+      {% block navbar %} <!--bloque de navegacion-->
+      {% endblock %}
+    </div>
+    <div id="main">
+      {% block content %} <!--bloque de contenido principal-->
+      {% endblock %}
+    </div>
+    <div id="footer"> <!--bloque de footer-->
+      {% block footer %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
