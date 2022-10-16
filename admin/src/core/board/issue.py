@@ -1,3 +1,5 @@
+#modelo de issues --> logica de negocio, info de issues
+
 def all(): #metodo que se encarga de obtener todos los issues
     issues = [  
         {

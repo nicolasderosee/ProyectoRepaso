@@ -1,6 +1,5 @@
 from os import environ
 
-
 class Config(object):
     
     """Base configuration."""
@@ -10,7 +9,7 @@ class Config(object):
     TESTING = False
 
 
-class ProductionConfig(Config):
+class ProductionConfig(Config): #objetos que heredan de config
     """Production configuration."""
     pass
 
