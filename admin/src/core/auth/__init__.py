@@ -8,3 +8,5 @@ def create_user(**kwargs): #obtengo todos los valores
     user = User(**kwargs)
     db.session.add(user)
     db.session.commit()
+
+    return user

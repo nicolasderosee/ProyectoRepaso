@@ -25,7 +25,36 @@ def run():
         status="done",
     )
 
-    jose= auth.create_user(email="jose@gmail.com", password="1234")
-    maria=auth.create_user(email="maria@gmail.com", password="1111")
-    orlando=auth.create_user(email="orlando@gmail.com", password="2222")
-    agus=auth.create_user(email="agus@gmail.com", password="2252")
+    fede= auth.create_user(email="fede@gmail.com", password="1234")
+    dolores=auth.create_user(email="dolores@gmail.com", password="1111")
+    ariana=auth.create_user(email="ariana@gmail.com", password="2222")
+
+
+    label1 = board.create_label(
+        title="Urgente",
+        description="Issues que tienen que resolverse dentro de 24hs"
+    )
+
+    label2 = board.create_label(
+        title="Importantes",
+        description="Issues de alta prioridad"
+    )
+
+    label3 = board.create_label(
+        title="Soporte",
+        description="Issues relacionados con soporte técnico",
+    )
+
+    label4 = board.create_label(
+        title="Ventas",
+        description="Issues relacionados con el área de ventas",
+    )
+
+
+    board.assign_labels(issue1, [label1,label2])
+    board.assign_labels(issue2, [label3,label4])
+    board.assign_labels(issue3, [label1,label4])
+
+    board.assign_user(issue1, fede)
+    board.assign_user(issue2, dolores)
+    board.assign_user(issue3, ariana)
